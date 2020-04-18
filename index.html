@@ -7,27 +7,23 @@
     <title>Travel Table</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
       integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCehscpkC6zkVEWlEvPL-Ja64zJxeXMGmU&callback=initMap"
+      type="text/javascript"></script>
   </head>
 
   <body>
-    <nav
-      class="top-bar"
-      style="
+    <nav class="top-bar" style="
         background-color: navy;
         padding-left: 1%;
         padding-top: 1%;
         padding-bottom: 0%;
-      "
-    >
+      ">
       <div class="top-bar-left">
         <ul class="menu" style="background-color: navy;">
           <li><input class="expand" type="search" placeholder="Search" /></li>
           <li>
-            <button
-              type="button"
-              class="button large"
-              style="background-color: maroon;"
-            >
+            <button type="button" class="button large" style="background-color: maroon;">
               Find My Location
             </button>
           </li>
@@ -38,12 +34,7 @@
         </ul>
       </div>
       <div class="top-bar-right">
-        <a
-          class="button large"
-          style="background-color: maroon;"
-          href="favorites.html"
-          >Favorite Restaurants</a
-        >
+        <a class="button large" style="background-color: maroon;" href="favorites.html">Favorite Restaurants</a>
       </div>
     </nav>
 
@@ -54,33 +45,25 @@
         </div>
       </aside>
 
-      <main
-        class="cell medium-6 large-8"
-        style="padding: 1%; padding-left: 0%;"
-      >
+      <main class="cell medium-6 large-8" style="padding: 1%; padding-left: 0%;">
         <div class="card" style="background: lightgray;">
           <h2 class="text-center">Top 5 Restaurants Near Me</h2>
         </div>
       </main>
     </div>
     <div class="grid-x">
-      <section
-        class="cell medium-6 large-4"
-        style="padding: 1%; padding-top: 0; margin-top: 0;"
-      >
+      <section class="cell medium-6 large-4" style="padding: 1%; padding-top: 0; margin-top: 0;">
         <div class="card" style="background: lightgray;" id="search-history">
           <p>Populate Here</p>
         </div>
       </section>
-      <section
-        class="cell medium-6 large-8"
-        style="padding: 1%; padding-top: 0; margin-top: 0; padding-left: 0;"
-      >
+      <section class="cell medium-6 large-8" style="padding: 1%; padding-top: 0; margin-top: 0; padding-left: 0;">
         <div class="card" style="background: lightgray;" id="restaurants">
           <p>Populate Here</p>
         </div>
       </section>
     </div>
+    <script src="/assets/js/maps.js"></script>
   </body>
 
   </html>
