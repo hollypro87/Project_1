@@ -1,70 +1,72 @@
-<<<<<<< HEAD=======<!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travel Table</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
-      integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCehscpkC6zkVEWlEvPL-Ja64zJxeXMGmU&callback=initMap"
-      type="text/javascript"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Table</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCehscpkC6zkVEWlEvPL-Ja64zJxeXMGmU&callback=initMap"
+    type="text/javascript"></script>
 
-  <body>
-    <nav class="top-bar" style="
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <nav class="top-bar" style="
         background-color: navy;
         padding-left: 1%;
         padding-top: 1%;
         padding-bottom: 0%;
       ">
-      <div class="top-bar-left">
-        <ul class="menu" style="background-color: navy;">
-          <li><input class="expand" type="search" placeholder="Search" /></li>
-          <li>
-            <button type="button" class="button large" style="background-color: maroon;">
+    <div class="top-bar-left">
+      <ul class="menu" style="background-color: navy;">
+        <li><input class="expand" type="search" placeholder="Search" /></li>
+        <li>
+          <button type="button" class="button large" style="background-color: maroon;">
+            <button type="button" class="button large">
               Find My Location
             </button>
-          </li>
-          <li></li>
-          <li class="h1 text-center" style="margin-left: 25%;">
-            Travel Table
-          </li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <a class="button large" style="background-color: maroon;" href="favorites.html">Favorite Restaurants</a>
-      </div>
-    </nav>
-
-    <div class="grid-x">
-      <aside class="cell medium-6 large-4" style="padding: 1%;">
-        <div class="card" style="background: lightgray;">
-          <h2 class="text-center">Recent Restaurants</h2>
-        </div>
-      </aside>
-
-      <main class="cell medium-6 large-8" style="padding: 1%; padding-left: 0%;">
-        <div class="card" style="background: lightgray;">
-          <h2 class="text-center">Top 5 Restaurants Near Me</h2>
-        </div>
-      </main>
+        </li>
+        <li></li>
+        <li class="h1 text-center" style="margin-left: 25%;">
+          Travel Table
+        </li>
+      </ul>
     </div>
-    <div class="grid-x">
-      <section class="cell medium-6 large-4" style="padding: 1%; padding-top: 0; margin-top: 0;">
-        <div class="card" style="background: lightgray;" id="search-history">
-          <p>Populate Here</p>
-        </div>
-      </section>
-      <section class="cell medium-6 large-8" style="padding: 1%; padding-top: 0; margin-top: 0; padding-left: 0;">
-        <div class="card" style="background: lightgray;" id="restaurants">
-          <p>Populate Here</p>
-        </div>
-      </section>
+    <div class="top-bar-right">
+      <a class="button large" href="favorites.html">Favorite Restaurants</a>
     </div>
-    <script src="/assets/js/maps.js"></script>
-  </body>
+  </nav>
 
-  </html>
-  >>>>>>> 396cf418a6d1ff74d576ad8607e7307d4db2258d
+  <div class="grid-x">
+    <aside class="cell medium-6 large-4" style="padding: 1%;">
+      <div class="card">
+        <h2 class="text-center">Recent Restaurants</h2>
+      </div>
+    </aside>
+
+    <main class="cell medium-6 large-8" style="padding: 1%; padding-left: 0%;">
+      <div class="card">
+        <h2 class="text-center">Top 5 Restaurants Near Me</h2>
+      </div>
+    </main>
+  </div>
+  <div class="grid-x">
+    <section class="cell medium-6 large-4" style="padding: 1%; padding-top: 0; margin-top: 0;">
+      <div class="card" id="search-history">
+        <p>Populate Here</p>
+      </div>
+    </section>
+    <section class="cell medium-6 large-8" style="padding: 1%; padding-top: 0; margin-top: 0; padding-left: 0;">
+      <div class="card" id="restaurants">
+        <p>Populate Here</p>
+      </div>
+    </section>
+  </div>
+  <script src="/assets/js/maps.js"></script>
+</body>
+
+</html>
