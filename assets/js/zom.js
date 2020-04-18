@@ -15,7 +15,7 @@ function cuisineSearch(cityInfo) {
     url: queryURL,
     method: "GET",
   }).then(function (res) {
-    $("id").append();
+    // $("id").append();
     console.log(queryURL);
   });
 }
