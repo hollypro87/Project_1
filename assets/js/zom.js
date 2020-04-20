@@ -10,7 +10,7 @@ $("button").on("click", function (e) {
 });
 
 function cuisineSearch(cityInfo) {
-  console.log(cityInfo);
+  // console.log(cityInfo);
   var queryURL = `https://developers.zomato.com/api/v2.1/cities?q=${cityInfo}`;
   console.log(queryURL);
 
@@ -21,6 +21,7 @@ function cuisineSearch(cityInfo) {
     // $("id").append();
     console.log(queryURL);
     console.log(cityInfo);
+    console.log(res);
 
     var cityName = $("<p>").text(cityInfo);
     $("#restSearch").append(cityName);
