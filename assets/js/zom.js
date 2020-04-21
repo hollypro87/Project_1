@@ -25,8 +25,8 @@ function cuisineSearch(cityInfo) {
     console.log(cityInfo);
     console.log(res);
 
-    var cityName = $("<p>").text(cityInfo);
-    $("#restSearch").append(cityName);
+    var cityName = $("<p>").text(drinks.strDrink);
+    $("#restaurants").append(cityName);
   });
 }
 
