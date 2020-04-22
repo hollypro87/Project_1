@@ -1,7 +1,7 @@
 $("#cocktail").click(function (e) {
   e.preventDefault();
-  var cocktail = $("#ingredient");
-  cocktail = $("#ingredient").val();
+  var cocktail = $("#searchCocktail");
+  cocktail = $("#searchCocktail").val();
   cocktailSearch(cocktail);
   console.log(cocktail);
 });
@@ -15,6 +15,11 @@ function cocktailSearch(cocktail) {
     method: "GET",
   }).then(function (res) {
     console.log(res);
+    for (var i = 0; i < 5; i++) {
+      var cocktailDiv = $("<div>");
+      cocktailDiv.append(res.drinks[i]);
+    }
   });
-
 }
+
+// populating res to page
