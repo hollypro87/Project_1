@@ -25,6 +25,7 @@ function cocktailSearch(cocktail) {
       console.log(res.drinks[i].strDrink);
       var cocktailDiv = $("<li>");
       cocktailDiv.append(res.drinks[i].strDrink);
+      cocktailDiv.append("<img src=" + res.drinks[i].strDrinkThumb + ">");
       $("#cocktailList").append(cocktailDiv);
     }
   });
