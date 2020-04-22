@@ -1,7 +1,7 @@
 $("#cocktail").click(function (e) {
   e.preventDefault();
-  var cocktail = $("#ingredient");
-  cocktail = $("#ingredient").val();
+  var cocktail = $("#searchCocktail");
+  cocktail = $("#searchCocktail").val();
   cocktailSearch(cocktail);
   console.log(cocktail);
 });
@@ -16,5 +16,4 @@ function cocktailSearch(cocktail) {
   }).then(function (res) {
     console.log(res);
   });
-
 }
