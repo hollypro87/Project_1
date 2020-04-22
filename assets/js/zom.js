@@ -12,7 +12,7 @@ $("button").on("click", function (e) {
 });
 
 function cuisineSearch(foodInfo) {
-  var queryURL = `https://api.spoonacular.com/recipes/search/?apiKey=fdee2460fb0543bbb3a01fba851b4b74
+  var queryURL = `https://api.spoonacular.com/recipes/search/?apiKey=${api_key}
   `;
   console.log(queryURL);
 
