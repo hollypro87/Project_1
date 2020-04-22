@@ -1,32 +1,43 @@
 var api_key = "AIzaSyCehscpkC6zkVEWlEvPL-Ja64zJxeXMGmU"
-var queryUrl = "https://www.googleapis.com/geolocation/v1/geolocate?key=(api_key)"
+var queryUrl = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCehscpkC6zkVEWlEvPL-Ja64zJxeXMGmU&callback=initMap"
 
+// Note: This example requires that you consent to location sharing when
+// prompted by your browser. If you see the error "The Geolocation service
+// failed.", it means you probably did not give permission for the browser to
+// locate you.
+var map, infoWindow;
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 6
+    });
+    infoWindow = new google.maps.InfoWindow;
 
-//var queryUrl = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCehscpkC6zkVEWlEvPL-Ja64zJxeXMGmU&callback=initMap"
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
 
-//function initMap() {
-    //var directionsService = new google.maps.DirectionsService();
-    //var directionsRenderer = new google.maps.DirectionsRenderer();
-    //var chicago = new google.maps.LatLng(41.850033, -87.6500523);
-    //var mapOptions = {
-       // zoom: 7,
-       // center: chicago
-   // }
-    //var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-   // directionsRenderer.setMap(map);
-//}
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+        }, function () {
+            handleLocationError(true, infoWindow, map.getCenter());
+        });
+    } else {
+        // Browser doesn't support Geolocation
+        handleLocationError(false, infoWindow, map.getCenter());
+    }
+}
 
-//function calcRoute() {
-   // var start = document.getElementById('start').value;
-   // var end = document.getElementById('end').value;
-  //  var request = {
-   //     origin: start,
-   //     destination: end,
-   //     travelMode: 'DRIVING'
-   // };
-   // directionsService.route(request, function (result, status) {
-   //     if (status == 'OK') {
-   //         directionsRenderer.setDirections(result);
-   //     }
-   // });
-//}
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+        'Error: The Geolocation service failed.' :
+        'Error: Your browser doesn\'t support geolocation.');
+    infoWindow.open(map);
+}

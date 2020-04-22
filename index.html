@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
@@ -19,10 +18,12 @@
         padding-bottom: 0%;
       ">
     <div class="top-bar-left">
-      <ul class="menu" style="background-color: navy;">
-        <li><input class="expand" type="search" placeholder="Search" id="city-search" /></li>
+
+      <ul class="menu">
+        <li><textarea name="searchBar" id="searchCity"></textarea></li>
         <li>
           <button type="button" class="button large">
+
             Find My Location
           </button>
         </li>
@@ -63,9 +64,11 @@
     </section>
   </div>
 
-
+  <div id="restSearch"></div>
   <script src="./assets/js/zom.js"></script>
   <script src="./assets/js/maps.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
 </body>
 
 </html>
