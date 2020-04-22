@@ -15,5 +15,11 @@ function cocktailSearch(cocktail) {
     method: "GET",
   }).then(function (res) {
     console.log(res);
+    for (var i = 0; i < 5; i++) {
+      var cocktailDiv = $("<div>");
+      cocktailDiv.append(res.drinks[i]);
+    }
   });
 }
+
+// populating res to page
