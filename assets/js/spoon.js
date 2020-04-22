@@ -3,6 +3,7 @@ var api_key = "fdee2460fb0543bbb3a01fba851b4b74";
 
 $("#recipes").on("click", function (e) {
   e.preventDefault();
+  $("#recipeList").empty();
   var foodInfo = $("#searchRecipe");
   foodInfo = $("#searchRecipe").val();
   cuisineSearch(foodInfo);
@@ -22,6 +23,9 @@ function cuisineSearch(foodInfo) {
     for (var i = 0; i < 5; i++) {
       // console.log(res.list[i]);
       console.log(res.results[i].title);
+      var recipeDiv = $("<li>");
+      recipeDiv.append(res.results[i].title);
+      $("#recipeList").append(recipeDiv);
     }
     // $("id").append();
     // console.log(queryURL);
