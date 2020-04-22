@@ -25,6 +25,12 @@ function cocktailSearch(cocktail) {
       console.log(res.drinks[i].strDrink);
       var cocktailDiv = $("<li>");
       cocktailDiv.append(res.drinks[i].strDrink);
+
+      var cocktailImg = $("<img/>", {
+        id: "drinkImg",
+        src: res.drinks[i].strDrinkThumb,
+        alt: "Cocktail Image",
+      });
       cocktailDiv.append("<img src=" + res.drinks[i].strDrinkThumb + ">");
       $("#cocktailList").append(cocktailDiv);
     }
