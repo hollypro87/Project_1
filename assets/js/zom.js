@@ -1,18 +1,18 @@
-var api_key = "011effc714198a73f9e6e2d459b7d7a9";
+var api_key = "fdee2460fb0543bbb3a01fba851b4b74";
 // 011effc714198a73f9e6e2d459b7d7a9
+// fdee2460fb0543bbb3a01fba851b4b74 - Spoonacular Key
 // var cityInfo = $("#searchCity");
 
 $("button").on("click", function (e) {
   e.preventDefault();
-  var cityInfo = $("#searchCity");
-  cityInfo = $("#searchCity").val();
-  cuisineSearch(cityInfo);
-  console.log(cityInfo);
+  var foodInfo = $("#searchCity");
+  foodInfo = $("#searchCity").val();
+  cuisineSearch(foodInfo);
+  console.log(foodInfo);
 });
 
-function cuisineSearch(cityInfo) {
-  // console.log(cityInfo);
-  var queryURL = `http://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cityInfo}
+function cuisineSearch(foodInfo) {
+  var queryURL = `https://api.spoonacular.com/recipes/search/?apiKey=fdee2460fb0543bbb3a01fba851b4b74
   `;
   console.log(queryURL);
 
@@ -21,12 +21,12 @@ function cuisineSearch(cityInfo) {
     method: "GET",
   }).then(function (res) {
     // $("id").append();
-    console.log(queryURL);
-    console.log(cityInfo);
+    // console.log(queryURL);
+    // console.log(cityInfo);
     console.log(res);
 
-    var cityName = $("<p>").text(drinks.strDrink);
-    $("#restaurants").append(cityName);
+    // var cityName = $("<p>").text(drinks.strDrink);
+    // $("#restaurants").append(cityName);
   });
 }
 
