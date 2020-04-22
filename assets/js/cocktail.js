@@ -16,4 +16,5 @@ function cocktailSearch(cocktail) {
   }).then(function (res) {
     console.log(res);
   });
+
 }

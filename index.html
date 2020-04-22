@@ -1,93 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travel Table</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
-      integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I="
-      crossorigin="anonymous"
-    />
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
 
-  <body>
-    <nav
-      class="top-bar"
-      style="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Table</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <nav class="top-bar" style="
         background-color: navy;
         padding-left: 1%;
         padding-top: 1%;
         padding-bottom: 0%;
-      "
-    >
-      <div class="top-bar-left">
-        <ul class="menu">
-          <li>
-            <input
-              class="expand"
-              type="search"
-              placeholder="Search"
-              id="searchCity"
-            />
-          </li>
-          <li>
-            <button type="button" class="button large">
-              Find My Location
-            </button>
-          </li>
-          <li></li>
-          <li class="h1 text-center" style="margin-left: 25%;">
-            Travel Table
-          </li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <a class="button large" href="favorites.html">Favorite Restaurants</a>
-      </div>
-    </nav>
-
-    <div class="grid-x">
-      <aside class="cell medium-6 large-4" style="padding: 1%;">
-        <div class="card">
-          <h2 class="text-center">Recent Restaurants</h2>
-        </div>
-      </aside>
-
-      <main
-        class="cell medium-6 large-8"
-        style="padding: 1%; padding-left: 0%;"
-      >
-        <div class="card">
-          <h2 class="text-center">Top 5 Restaurants Near Me</h2>
-        </div>
-      </main>
+      ">
+    <div class="top-bar-left">
+      <ul class="menu" style=" background-color:navy;">
+        <li>
+          <input class="expand" type="search" placeholder="Search" id="searchRecipe" />
+        </li>
+        <li>
+          <button type="button" class="button large">
+            Recipe Search
+          </button>
+        </li>
+        <li></li>
+        <li class="h1 text-center" style="margin-left: 25%;">
+          Travel Table
+        </li>
+      </ul>
     </div>
-    <div class="grid-x">
-      <section
-        class="cell medium-6 large-4"
-        style="padding: 1%; padding-top: 0; margin-top: 0;"
-      >
-        <div class="card" id="search-history">
-          <p>Populate Here</p>
-        </div>
-      </section>
-      <section
-        class="cell medium-6 large-8"
-        style="padding: 1%; padding-top: 0; margin-top: 0; padding-left: 0;"
-      >
-        <div class="card" id="restaurants">
-          <p>Populate Here</p>
-        </div>
-      </section>
+    <div class="top-bar-right">
+      <ul class="menu" style="background-color: navy;">
+        <li>
+          <input class="expand" type="search" placeholder="Search" id="searchCocktail" />
+        </li>
+        <li>
+          <button type="button" class="button large">
+            Search Cocktails
+          </button>
+        </li>
+        <a class="button large" href="favorites.html">Favorites</a>
     </div>
+  </nav>
 
-    <div id="restSearch"></div>
+  <div class="grid-x">
+    <aside class="cell medium-6 large-4" style="padding: 1%;">
+      <div class="card">
+        <h2 class="text-center">Recent Searches</h2>
+      </div>
+    </aside>
+
+    <main class="cell medium-6 large-8" style="padding: 1%; padding-left: 0%;">
+      <div class="card">
+        <h2 class="text-center">Search Results</h2>
+      </div>
+    </main>
+  </div>
+  <div class="grid-x">
+    <section class="cell medium-6 large-4" style="padding: 1%; padding-top: 0; margin-top: 0;">
+      <div class="card" id="search-history">
+        <p>Populate Here</p>
+      </div>
+    </section>
+    <section class="cell medium-6 large-8" style="padding: 1%; padding-top: 0; margin-top: 0; padding-left: 0;">
+      <div class="card" id="restaurants">
+        <p>Populate Here</p>
+      </div>
+    </section>
+  </div>
+  <div id="restSearch"></div>
 
     <script src="./assets/js/cocktail.js"></script>
     <script src="./assets/js/spoon.js"></script>
   </body>
 </html>
+
