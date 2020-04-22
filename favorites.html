@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Favorite Restaurants</title>
+    <title>Favorites</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -12,35 +12,31 @@
 
 <body>
     <nav class="top-bar" style="
-    background-color: navy;
-    padding-left: 1%;
-    padding-top: 1%;
-    padding-bottom: 0%;
-  ">
+          background-color: navy;
+          padding-left: 1%;
+          padding-top: 1%;
+          padding-bottom: 0%;
+        ">
         <div class="top-bar-left">
-
-            <ul class="menu" style="background-color: navy">
-                <li><textarea name="searchBar" id="searchRecipe"></textarea></li>
+            <ul class="menu" style=" background-color:navy;">
+                <li>
+                    <input class="expand" type="search" placeholder="Search" id="searchRecipe" />
+                </li>
                 <li>
                     <button type="button" class="button large">
-
-                        Search Recipes
+                        Recipe Search
                     </button>
                 </li>
                 <li></li>
                 <li class="h1 text-center" style="margin-left: 25%;">
-                    Feed and Meade
+                    Foods and Booze
                 </li>
             </ul>
         </div>
         <div class="top-bar-right">
-            <ul class="menu" style="background-color: navy">
-                <li><textarea name="searchBar" id="searchCocktail"></textarea></li>
+            <ul class="menu" style="background-color: navy;">
                 <li>
-                    <button type="button" class="button large">
-
-                        Search Cocktails
-                    </button>
+                    <input class="expand" type="search" placeholder="Search" id="searchCocktail" />
                 </li>
         </div>
         <div class="top-bar-right" style="padding-left: 1%;
@@ -48,6 +44,10 @@
             <a class="button large" href="index.html">Home</a>
         </div>
     </nav>
+
+    <div id="restSearch"></div>
+    <script src="./assets/js/spoon.js"></script>
+    <script src="./assets/js/maps.js"></script>
 </body>
 
 </html>
