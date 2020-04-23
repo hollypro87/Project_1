@@ -5,13 +5,16 @@ $("#cocktail").click(function (e) {
   var cocktail = $("#searchCocktail");
   cocktail = $("#searchCocktail").val();
   cocktailSearch(cocktail);
+  cocktailSearch(cocktail);
+  cocktailSearch(cocktail);
+  cocktailSearch(cocktail);
+  cocktailSearch(cocktail);
   console.log(cocktail);
 });
 
 // function to search cocktail DB being called in click function above
 function cocktailSearch(cocktail) {
-  var queryURL =
-    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + cocktail;
+  var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
   // ajax call to get drinks by ingredient
   $.ajax({
@@ -25,6 +28,15 @@ function cocktailSearch(cocktail) {
       console.log(res.drinks[i].strDrink);
       var cocktailDiv = $("<li>");
       cocktailDiv.append(res.drinks[i].strDrink);
+
+      var cocktailImg = $("<img/>").attr({
+        id: "drinkImg",
+        src: res.drinks[i].strDrinkThumb,
+        alt: "Cocktail Image",
+      });
+
+      /* cocktailDiv.append("<img src=" + res.drinks[i].strDrinkThumb + ">"); */
+      cocktailDiv.append(cocktailImg);
       $("#cocktailList").append(cocktailDiv);
     }
   });
