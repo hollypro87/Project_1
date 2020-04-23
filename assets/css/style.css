@@ -9,3 +9,6 @@
 .card {
   background: lightgray;
 }
+.top-bar {
+  vertical-align: text-top;
+}
