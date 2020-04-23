@@ -1,14 +1,18 @@
 .h1 {
   color: floralwhite;
+  font-family: "Shadows Into Light", cursive;
 }
 .cell {
 }
 .button {
-  background-color: maroon;
+  background-color: #000033;
 }
 .card {
   background: lightgray;
 }
 .top-bar {
-  vertical-align: text-top;
+  font-family: "Shadows Into Light", cursive;
+}
+nav {
+  background-color: #090942;
 }
