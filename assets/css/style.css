@@ -1,0 +1,26 @@
+.h1 {
+  color: floralwhite;
+  font-family: "Shadows Into Light", cursive;
+}
+.cell {
+}
+.button {
+  background-color: #000033;
+}
+.card {
+  background: lightgray;
+}
+.top-bar {
+  font-family: "Shadows Into Light", cursive;
+}
+nav {
+  background-color: #090942;
+}
+body {
+  background-color: #090942;
+}
+img {
+  display: block;
+  line-height: 100px;
+  vertical-align: middle;
+}

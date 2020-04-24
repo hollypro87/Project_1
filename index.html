@@ -3,7 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Bites and Quarantinis</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+      integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I="
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+
+  <body>
+    <nav
+      class="top-bar"
+      style="
+        background-color: #090942;
+        padding-left: 1%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+      "
+    >
+      <div class="top-bar-left">
+        <ul class="menu" style="background-color: #660000;">
+          <li>
+            <input
+              class="expand"
+              type="search"
+              placeholder="Search Recipes Here"
+              id="searchRecipe"
+            />
+          </li>
+          <li>
+            <button type="button" class="button large" id="recipes">
+              Recipe Search
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="button large"
+              id="cocktail"
+              style="margin-left: 10%;"
+              ;
+            >
+              Cocktails!
+            </button>
+          </li>
+          <li></li>
+          <li class="h1 text-center" style="margin-left: 15%;">
+            Bites and Quarantinis
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="grid-x">
+      <aside class="cell medium-6 large-6" style="padding: 1%;">
+        <div class="card" style="background-color: #660000; color: white;">
+          <h2 class="text-center">Recipe Results</h2>
+        </div>
+      </aside>
+
+      <main
+        class="cell medium-6 large-6"
+        style="padding: 1%; padding-left: 0%;"
+      >
+        <div class="card" style="background-color: #660000; color: white;">
+          <h2 class="text-center">Cocktail Results</h2>
+        </div>
+      </main>
+    </div>
+    <div class="grid-x">
+      <section
+        class="cell medium-6 large-6"
+        style="padding: 1%; padding-top: 0; margin-top: 0;"
+      >
+        <div class="card">
+          <ol id="recipeList"></ol>
+        </div>
+      </section>
+      <section
+        class="cell medium-6 large-6"
+        style="padding: 1%; padding-top: 0; margin-top: 0; padding-left: 0;"
+      >
+        <div class="card">
+          <ol id="cocktailList"></ol>
+        </div>
+      </section>
+    </div>
+    <div id="restSearch"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/zoomerang@0.1.9/zoomerang.min.js"></script>
+    <script src="./assets/js/cocktail.js"></script>
+    <script src="./assets/js/spoon.js"></script>
+  </body>
 </html>
