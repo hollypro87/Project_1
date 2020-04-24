@@ -31,10 +31,12 @@ function cuisineSearch(foodInfo) {
       recipeLink.text(res.results[i].title);
       recipeDiv.append(recipeLink);
       var recImage = $("<img>");
-      recImage.attr(
-        "src",
-        "https://spoonacular.com/recipeImages/" + res.results[i].image
-      );
+      recImage.attr({
+        src: "https://spoonacular.com/recipeImages/" + res.results[i].image,
+        alt: "Recipe Image",
+        width: 300,
+        height: 300,
+      });
       recipeDiv.append(recImage);
       $("#recipeList").append(recipeDiv);
     }
