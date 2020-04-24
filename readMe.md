@@ -1,4 +1,4 @@
-<h1>Bites and Quarentinis</h1>
+<h1>Bites and Quarantinis</h1>
 <p>Created by Holly Prothe, James Van Slyke, and Wesley Slifer</p>
 
 <h2>User Story</h2>
