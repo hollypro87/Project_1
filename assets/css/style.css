@@ -20,5 +20,7 @@ body {
   background-color: #090942;
 }
 img {
-  margin-left: 20%;
+  display: block;
+  line-height: 100px;
+  vertical-align: middle;
 }
