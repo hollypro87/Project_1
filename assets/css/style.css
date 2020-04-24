@@ -22,5 +22,7 @@ body {
 img {
   display: block;
   line-height: 100px;
-  vertical-align: middle;
+  /* vertical-align: middle; */
+  width: 300;
+  height: 300;
 }

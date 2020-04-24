@@ -5,10 +5,10 @@ var api_key = "fdee2460fb0543bbb3a01fba851b4b74";
 $("#recipes").on("click", function (e) {
   e.preventDefault();
   $("#recipeList").empty();
-  var memory = $("#searchRecipe").attr("id");
+  // var memory = $("#searchRecipe").attr("id");
   var foodInfo = $("#searchRecipe");
   foodInfo = $("#searchRecipe").val();
-  localStorage.setItem(memory, foodInfo);
+  // localStorage.setItem(memory, foodInfo);
   cuisineSearch(foodInfo);
   console.log(foodInfo);
 });
@@ -36,12 +36,13 @@ function cuisineSearch(foodInfo) {
       recImage.attr({
         src: "https://spoonacular.com/recipeImages/" + res.results[i].image,
         alt: "Recipe Image",
-        width: 300,
-        height: 300,
+        class: "recipeImg",
+        style: "z-index:100;width:300px;height:300px",
       });
       recipeDiv.append(recImage);
       $("#recipeList").append(recipeDiv);
       // $("#searchRecipe").val(localStorage.getItem("searchRecipe"));
+      mediumZoom(".recipeImg", { background: "#090942" });
     }
   });
 }
