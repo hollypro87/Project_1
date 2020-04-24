@@ -7,6 +7,7 @@ $("#recipes").on("click", function (e) {
   $("#recipeList").empty();
   var foodInfo = $("#searchRecipe");
   foodInfo = $("#searchRecipe").val();
+  // localStorage.setItem(foodInfo);
   cuisineSearch(foodInfo);
   console.log(foodInfo);
 });
@@ -39,6 +40,7 @@ function cuisineSearch(foodInfo) {
       });
       recipeDiv.append(recImage);
       $("#recipeList").append(recipeDiv);
+      // $("#recipes").val(localStorage.getItem("recipes"));
     }
   });
 }
