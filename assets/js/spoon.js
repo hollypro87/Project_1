@@ -34,11 +34,12 @@ function cuisineSearch(foodInfo) {
       recImage.attr({
         src: "https://spoonacular.com/recipeImages/" + res.results[i].image,
         alt: "Recipe Image",
-        width: 300,
-        height: 300,
+        class: "recipeImg",
+        style: "z-index:100;width:300px;height:300px",
       });
       recipeDiv.append(recImage);
       $("#recipeList").append(recipeDiv);
+      mediumZoom(".recipeImg", { background: "#090942" });
     }
   });
 }
