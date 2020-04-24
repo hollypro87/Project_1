@@ -34,45 +34,13 @@ $(document).ready(function () {
           class: "drinkImg",
           src: res.drinks[i].strDrinkThumb,
           alt: "Cocktail Image",
-
           style: "z-index:100;width:300px;height:300px",
         });
 
         /* cocktailDiv.append("<img src=" + res.drinks[i].strDrinkThumb + ">"); */
         cocktailDiv.append(cocktailImg);
         $("#cocktailList").append(cocktailDiv);
-
-        Zoomerang.config({
-          maxHeight: 400,
-          maxWidth: 400,
-          bgColor: "#000",
-          bgOpacity: 1,
-          deepCopy: true,
-          onOpen: openCallback,
-          onClose: closeCallback,
-          onBeforeOpen: beforeOpenCallback,
-          onBeforeClose: beforeCloseCallback,
-        }).listen(".drinkImg");
-
-        function openCallback(el) {
-          console.log("zoomed in on: ");
-          console.log(el);
-        }
-
-        function closeCallback(el) {
-          console.log("zoomed out on: ");
-          console.log(el);
-        }
-
-        function beforeOpenCallback(el) {
-          console.log("on before zoomed in on:");
-          console.log(el);
-        }
-
-        function beforeCloseCallback(el) {
-          console.log("on before zoomed out on:");
-          console.log(el);
-        }
+        mediumZoom(".drinkImg", { background: "#090942" });
       }
     });
   }
