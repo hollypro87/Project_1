@@ -33,6 +33,8 @@ function cocktailSearch(cocktail) {
         id: "drinkImg",
         src: res.drinks[i].strDrinkThumb,
         alt: "Cocktail Image",
+        width: 300,
+        height: 300,
       });
 
       /* cocktailDiv.append("<img src=" + res.drinks[i].strDrinkThumb + ">"); */
